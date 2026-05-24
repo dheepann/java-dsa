@@ -1,4 +1,4 @@
-package com;
+package com.basics;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ public class Temperature {
         System.out.println("Enter temperature in celcius: ");
         float C = input.nextFloat();
         float F = ((C * 9 / 5) + 32);
-        System.out.println(C+ "degree celcius is "+F+ "Faranheit");
+        System.out.println(C + "degree celcius is " + F + "Faranheit");
 
     }
 
