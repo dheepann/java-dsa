@@ -8,8 +8,7 @@ public class Floor {
         System.out.println(ans);
     }
 
-    // return the index
-    // return -1 if it does not exist
+    // return the index of greatest number<=target
     static int floor(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
