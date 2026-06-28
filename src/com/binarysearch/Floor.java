@@ -3,7 +3,7 @@ package com.binarysearch;
 public class Floor {
     public static void main(String[] args) {
         int[] arr = {-8, -3, 0, 18, 24, 66, 79, 100};
-        int target = -3;
+        int target = 2;
         int ans = floor(arr, target);
         System.out.println(ans);
     }
