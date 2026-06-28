@@ -4,13 +4,13 @@ public class Floor {
     public static void main(String[] args) {
         int[] arr = {-8, -3, 0, 18, 24, 66, 79, 100};
         int target = -3;
-        int ans = binarySearch(arr, target);
+        int ans = floor(arr, target);
         System.out.println(ans);
     }
 
     // return the index
     // return -1 if it does not exist
-    static int binarySearch(int[] arr, int target) {
+    static int floor(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
         while (start <= end) {
