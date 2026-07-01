@@ -43,6 +43,7 @@ public class RotatedSortedArray {
         return -1;
     }
 
+    //this will not work for duplicate values
     static int findPivot(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
@@ -56,7 +57,7 @@ public class RotatedSortedArray {
             if (mid > start && arr[mid] < arr[mid - 1]) {
                 return mid - 1;
             }
-            if (arr[mid] <= arr[start]) {
+            if (arr[mid] <= arr[start]) { // from here the code will fail if the mid,start and end in the array are duplicates
                 end = mid - 1;
             } else {
                 start = mid + 1;
@@ -65,4 +66,36 @@ public class RotatedSortedArray {
         return -1;
     }
 
+}
+
+static int findPivotWithDuplicates(int[] arr) {
+    int start = 0;
+    int end = arr.length - 1;
+    while (start <= end) {
+        int mid = start + (end - start) / 2;
+
+        //4 cases over here
+        if (mid < end && arr[mid] > arr[mid + 1]) {
+            return mid;
+        }
+        if (mid > start && arr[mid] < arr[mid - 1]) {
+            return mid - 1;
+        }
+        // if the elements at start,mid and end are equal then skip them
+        if (arr[mid] == arr[start] && arr[mid] == arr[end]) {
+            //skip the duplicates
+            //NOTE: but what if the start and end were the pivot?
+            //check if start is pivot
+            if (arr[start] > arr[start + 1]) {
+                return start;
+            }
+            start++;
+            //check if end is pivot
+            if (arr[end] < arr[end - 1]) {
+                return end - 1;
+            }
+            end--;
+        }
+    }
+    return -1;
 }
