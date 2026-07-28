@@ -18,7 +18,7 @@ public class Operators {
         System.out.println(new Integer(56) + 56); //=112
 //        System.out.println(new Integer(56) + new ArrayList<>()); //gives error because the + operator works only with primitive type and atleast one of the object is string type
         System.out.println(new Integer(56) + "" + new ArrayList<>()); //prints 56[]
-          
+        System.out.println("a" + 'b'); //prints ab because if one of the obj is string the output will also be string
 
     }
 }
