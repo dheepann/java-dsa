@@ -69,7 +69,7 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
         }
-        double avg = sum / arr.length;
+        double avg = (double) sum / arr.length;
         return avg;
     }
 
