@@ -1,4 +1,4 @@
 package com.basicspractice;
 
-public class practice2 {
+public class GetEvenNumbers {
 }
