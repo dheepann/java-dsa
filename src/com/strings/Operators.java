@@ -12,7 +12,7 @@ public class Operators {
         System.out.println("a" + 1); //prints a1. integer will be converted to Integer that will call toString()
         //this is same as "a"+"1"
 
-        System.out.println("Dheepan" + new ArrayList<>());
+        System.out.println("Dheepan" + new ArrayList<>()); //prints Dheepan[]
         System.out.println("Dheepan" + new Integer(56)); //prints Dheepan56 as this one also calls the toString() method
 
         System.out.println(new Integer(56) + 56); //=112
