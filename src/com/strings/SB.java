@@ -37,5 +37,19 @@ public class SB {
             reversed3.append(s2.charAt(i));
         }
         System.out.println(reversed3.toString());
+
+
+        //program to concatenate 2 strings
+        String str1 = "Hello";
+        String str2 = "world";
+
+        //using + operator
+        String resultWithPlus = str1 + " " + str2;
+        System.out.println(resultWithPlus);
+
+        //without + operator
+        StringBuilder resultWithoutPlus = new StringBuilder();
+        resultWithoutPlus.append(str1).append(" ").append(str2);
+        System.out.println(resultWithoutPlus.toString());
     }
 }
