@@ -4,7 +4,7 @@ package com.recursion;
 public class BinarySearch {
     public static void main(String[] args) {
         int[] arr = {1, 4, 9, 34, 45, 78, 99};
-        int target = 45;
+        int target = 1;
         System.out.println(search(arr, target, 0, arr.length - 1));
     }
 
