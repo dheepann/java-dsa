@@ -58,5 +58,7 @@ public class Methods2 {
         }
 
         System.out.println(count2);
+
+        // important: So toCharArray() is not necessary every time you want to work with characters. It is useful when you specifically want the String's characters as a char[].
     }
 }
