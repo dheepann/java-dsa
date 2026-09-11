@@ -6,7 +6,9 @@ public class RemoveCharacters {
         char target = 'e';
 
         //removing character using inbuilt java methods:
-        String resultWithInbuilt = str.replace(String.valueOf(target), "");
+        String resultWithInbuilt = str.replace(String.valueOf(target), ""); // String.valueOf() converts values like numbers or booleans into a readable string format.
+        // String.valueOf() can be applied to all primitive (int, boolean, etc.) as well as char[] unlike obj.toString() method which cannot be directly called on primitive types.
+
         System.out.println("After removing " + target + "(using inbuilt method): " + resultWithInbuilt);
 
         //removing character without using inbuilt methods and using StringBuilder
