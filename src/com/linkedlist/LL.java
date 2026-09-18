@@ -24,6 +24,42 @@ public class LL {
         size += 1;
     }
 
+    public void insertInBetween(int val, int index) {
+        if (index == 0) {
+            insertAtFirst(val);
+            return;
+        }
+        if (index == size) {
+            insertAtLast(val);
+            return;
+        }
+        Node temp = head;
+        for (int i = 1; i < index; i++) {
+            temp = temp.next;
+        }
+        Node node = new Node(val, temp.next); // Put val in the new Node, and connect that new Node to whatever comes after temp. but both the newly created Node and the original Node point to the same Node that comes after it
+        temp.next = node; // Now make temp point to this new Node. in other words, take the next field inside the value pointing by temp Node and put the reference stored in node into it.
+    }
+
+    public void insertAtLast(int val) {
+        if (tail == null) {
+            insertAtFirst(val);
+            return;
+        }
+        Node node = new Node(val);
+        tail.next = node;
+        tail = node;
+        size++;
+    }
+
+    public void display() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.val + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("END");
+    }
 
     private class Node {
         private int val;
