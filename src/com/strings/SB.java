@@ -20,7 +20,7 @@ public class SB {
 
 
         // program to reverse a string with in-built method
-        String str = "Hello Dheepan";
+        String str = "Dheepan Hello World";
         String reversed = new StringBuilder(str).reverse().toString();
         System.out.println(reversed);
 

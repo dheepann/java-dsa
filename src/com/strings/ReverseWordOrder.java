@@ -5,7 +5,7 @@ package com.strings;
 
 public class ReverseWordOrder {
     public static void main(String[] args) {
-        String str = "Java Full Stack development";
+        String str = "Java Full Stack Development";
         reverseWord(str); // using .split() method
     }
 
